@@ -1,8 +1,14 @@
 <script lang="ts">
   import '../assets/css/tailwind.css'
 
+  import SearchMovies from '../components/SearchMovies.svelte';
+
   export let pageTitle = `Svelte Movie API YouTube Course`
 </script>
+
+<svelte:head>
+  <title>Movie DB</title>
+</svelte:head>
 
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
@@ -70,26 +76,14 @@
         </div>
       </div>
     </div>
-
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-      </div>
-    </div>
   </nav>
 
   <div class="bg-gray-800">
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto py-16 px-4 text-center sm:py-24 sm:px-6 lg:text-left lg:px-8 ">
       <h2 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">{pageTitle}</h2>
       <p class="mt-5 text-xl text-gray-400">Start building for free, then add a site plan to go live. Account plans unlock additional features.</p>
+      
+      <SearchMovies />
     </div>
   </div>
   <div class="max-w-7xl mt-8 mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">

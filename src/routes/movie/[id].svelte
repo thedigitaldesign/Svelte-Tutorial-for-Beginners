@@ -22,16 +22,6 @@
         }
       }
     }
-
-    // if (response.ok) {
-    //   return {
-    //     props: {
-    //       data
-    //     }
-    //   }
-    // }
-
-    return {}
   }
 </script>
 
