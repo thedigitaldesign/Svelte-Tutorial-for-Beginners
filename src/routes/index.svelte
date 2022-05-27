@@ -10,7 +10,8 @@
    * https://api.themoviedb.org/3/movie/550?api_key=7e1af67d95da889535e6fa84e56a36b1
    */
 
-  export async function load<fetch>() {
+  // export async function load<fetch>() {
+  export const load = async ({ fetch }) => {
     // const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${}&language=en-US&page=1`)
     const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7e1af67d95da889535e6fa84e56a36b1&language=en-US&page=1`)
     const data = await response.json()
